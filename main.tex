@@ -1,0 +1,131 @@
+\documentclass{report}
+\usepackage{silence}
+\WarningFilter{latex}{Command}
+% Configuración
+\input{config.tex}
+\usepackage[a4paper]{geometry}
+\usepackage{graphicx, wrapfig, subcaption, setspace, booktabs}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage[scaled]{helvet}     % Fuente del documento
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\usepackage{tabularx}
+
+% Puedes cambiar el color principal
+% \definecolor{primary}{HTML}{}
+
+\begin{document}
+
+\pagestyle{empty}
+\portada{NOTAS DE X TEMA}{Plantilla de notas}{Autor}
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\chapter{Entornos definidos}
+
+Texto de relleno.
+
+
+\section{Teoremas}
+
+\teorema{Teorema Fundamental del cálculo}{
+    Este teorema es fundamental para el cálculo muestra la estrecha relación entre la integral y la derivada.
+
+    \[
+        \frac{d}{dx}\int f(x)\, dx = f(x)
+    \]
+}
+
+\section{Corolario}
+
+\corolario{Segundo teorema fundamental del calculo}{
+    Sea $F(X)=\int f(x)\, dx$ entonces:
+
+    \[\int_a^b f(x)\,dx = F(a)-F(b)\]
+}
+
+\section{Nota}
+
+\nota{Notación}{
+    Una notación utilizada para representar esto es la siguiente:
+
+    \[
+        \int_a^b f(x)\, dx = \left. F(x) \right|_b^a
+    \]
+}
+
+\section{Lema}
+
+\lema{Tercer excluido}{
+    \[\vdash_{LP} \alpha \lor \neg \alpha \]
+}
+
+\section{Preposición}
+
+\preposicion{Una preposición}{
+    Esto es una preposicion
+}
+
+\section{Definición}
+
+\dfe{Una definición cualquiera}{
+    Texto de relleno.
+}
+
+\section{Otros entornos}
+
+\ejemplo{
+    Esto es un ejemplo
+
+    \solucion{
+        Esta es la solución del ejemplo
+    }
+}
+
+\demostracion{
+    La demostración queda como ejercicio para el lector.
+}
+
+\section{Listas}
+
+Listas enumeradas
+
+\listo{
+    \item Primero item
+    \item Segundo item
+    \item Tercer item
+}
+
+Listas con puntos
+
+\listu{
+    \item Primero item
+    \item Segundo item
+    \item Tercer item
+}
+
+\newpage
+
+\chapter{Hola como estas}
+
+Texto de relleno.
+
+\section{Esto es una sección}
+
+fdkjds;lkjfdskjsakjk;lj;kasjk;lfjdsk;jkl;jdsakljkajkadsjkajf;kjsd;ljla
+
+\section{Otro capitulo}
+
+Texto de relleno.
+\subsection{Hola como estas}
+\subsection*{No lo se}
+
+\fancybox{primary}{Prubea de nueva caja}{
+djkfhjklshdflakffklasjhjlkdshklajhjklhlksdj
+}
+\end{document}  
