@@ -1,0 +1,98 @@
+% ========================================
+% PREAMBLE.TEX - Configuración del documento
+% ========================================
+
+\usepackage{silence}
+\WarningFilter{latex}{Command}
+\usepackage[scaled]{helvet}     % Fuente del documento
+\renewcommand{\familydefault}{\sfdefault}
+
+% ========== CODIFICACIÓN Y IDIOMA ==========
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+
+% ====== MATEMÁTICAS, FISICA Y QUIMICA ======
+\usepackage{amsmath}            % Ecuaciones y entornos matemáticos
+\usepackage{amsthm}             % Teoremas y demostraciones
+\usepackage{amssymb}            % Símbolos matemáticos
+\usepackage{amsfonts}           % Fuentes matemáticas
+\usepackage{mathtools}          % Extensión de amsmath
+\usepackage{tensor}             % Notación tensorial (física)
+%\usepackage{physics}            % Comandos de física (derivadas, vectores, etc.)
+\usepackage[version=4]{mhchem}  % Fórmulas químicas y reacciones
+\usepackage{chemfig}            % Estructuras moleculares
+\usepackage{chemformula}        % Fórmulas químicas alternativas
+\usepackage{siunitx}            % Sistema Internacional de Unidades
+\sisetup{
+    output-decimal-marker = {,},
+    separate-uncertainty = true,
+    per-mode = symbol
+}
+
+% ========== GEOMETRÍA Y FORMATO ==========
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    margin=2.5cm,
+    top=3cm,
+    bottom=3cm
+}
+\usepackage{fancyhdr}       % Encabezados y pies de página
+\usepackage{setspace}       % Espaciado entre líneas
+
+% ========== GRÁFICOS Y FIGURAS ==========
+\usepackage{graphicx}       % Incluir imágenes
+\usepackage{float}          % Control de posición de figuras
+\usepackage{caption}        % Personalizar captions
+\usepackage{subcaption}     % Subfiguras
+\usepackage{tikz}           % Dibujos y diagramas
+\usepackage{anyfontsize}
+\usepackage{pgfplots}       % Gráficas matemáticas
+\usepackage{circuitikz}     % Circuitos eléctricos
+\pgfplotsset{compat=1.18}
+
+% ========== TABLAS ==========
+\usepackage{array}          % Mejorar tablas
+\usepackage{booktabs}       % Líneas profesionales en tablas
+\usepackage{multirow}       % Celdas que abarcan múltiples filas
+\usepackage{longtable}      % Tablas largas
+
+% ========== LISTAS Y ENUMERACIONES ==========
+\usepackage{enumerate}      % Listas personalizadas
+\usepackage{enumitem}       % Control avanzado de listas
+
+% ========== CÓDIGO Y ALGORITMOS ==========
+\usepackage{listings}       % Código fuente
+\usepackage{algorithm}      % Algoritmos
+\usepackage{algorithmic}    % Pseudocódigo
+
+% ========== COLORES ==========
+\usepackage{xcolor}
+\definecolor{myblue}{RGB}{0,82,155}
+\definecolor{mygreen}{RGB}{0,128,0}
+\definecolor{myred}{RGB}{200,0,0}
+
+% ========== HIPERVÍNCULOS ==========
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=myblue,
+    filecolor=myred,
+    urlcolor=myblue,
+    citecolor=mygreen,
+    pdftitle={Notas de Clase},
+    pdfauthor={Tu Nombre},
+}
+\usepackage{cleveref}       % Referencias inteligentes
+
+% ========== BIBLIOGRAFÍA ==========
+\input{bibliography/bibliography}
+
+% ============= ESTILOS ============
+\usepackage{structure/styles/style}
+\usepackage{structure/styles/environments}
+
+% ============= portada ============
+\input{structure/front_page}

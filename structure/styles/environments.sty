@@ -1,0 +1,199 @@
+% ========================================
+% ENVIORONMENTS.STY
+% Definicion de entornos
+% ========================================
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{structure/styles/environments}[2025/10/25 Estilo general para notas]
+
+
+% ========== COLORES ==========
+\RequirePackage{xcolor}
+\definecolor{myblue}{RGB}{0,82,155}
+\definecolor{mygreen}{RGB}{0,128,0}
+\definecolor{myred}{RGB}{200,0,0}
+\definecolor{mypurple}{RGB}{128,0,128}
+\definecolor{myorange}{RGB}{255,140,0}
+\definecolor{primary}{HTML}{207ba5}
+
+% ========== CAJAS DESTACADAS ==========
+\RequirePackage{tcolorbox}
+\tcbuselibrary{theorems,skins,breakable}
+
+% ========== ENTORNO: DEFINICIÓN ==========
+\newcounter{maththeorem}[section]
+\renewcommand{\themaththeorem}{\thesection.\arabic{maththeorem}}
+\newtcbtheorem[use counter=maththeorem, number within=section]{definition}{Definición}{
+  enhanced,
+  colback=red!5,
+  colframe=red!70!black,
+  fonttitle=\bfseries,
+  coltitle=white,
+  borderline={0.8pt}{0pt}{red!70!black},
+  attach boxed title to top left={yshift=-2mm, xshift=3mm},
+  boxed title style={
+    colback=red!70!black,
+    sharp corners,
+    boxrule=0pt,
+    left=4pt, right=4pt, top=2pt, bottom=2pt
+  },
+  rounded corners,
+  boxsep=4pt,
+  breakable,  % Permite que la caja se divida entre páginas
+  separator sign none,
+  }{def}
+
+% ========== ENTORNO: TEOREMA ==========
+\newtcbtheorem[use counter=maththeorem, number within=section]{theorem}{Teorema}{
+  enhanced,
+  colback=blue!5,
+  colframe=blue!70!black,
+  fonttitle=\bfseries,
+  coltitle=white,
+  borderline={0.8pt}{0pt}{blue!70!black},
+  attach boxed title to top left={yshift=-2mm, xshift=3mm},
+  boxed title style={
+    colback=blue!70!black,
+    sharp corners,
+    boxrule=0pt,
+    left=4pt, right=4pt, top=2pt, bottom=2pt
+  },
+  rounded corners,
+  boxsep=4pt,
+  breakable,
+  separator sign none,
+}{thm}
+
+% ========== ENTORNO: PROPOSICIÓN ==========
+\newtcbtheorem[use counter=maththeorem, number within=section]{proposition}{Proposición}{
+  enhanced,
+  colback=purple!5,
+  colframe=purple!70!black,
+  fonttitle=\bfseries,
+  coltitle=white,
+  borderline={0.8pt}{0pt}{purple!70!black},
+  attach boxed title to top left={yshift=-2mm, xshift=3mm},
+  boxed title style={
+    colback=purple!70!black,
+    sharp corners,
+    boxrule=0pt,
+    left=4pt, right=4pt, top=2pt, bottom=2pt
+  },
+  rounded corners,
+  boxsep=4pt,
+  breakable,
+  separator sign none,
+}{prop}
+
+% ========== ENTORNO: LEMA ==========
+\newtcbtheorem[use counter=maththeorem, number within=section]{lemma}{Lema}{
+  enhanced,
+  colback=teal!5,
+  colframe=teal!70!black,
+  fonttitle=\bfseries,
+  coltitle=white,
+  borderline={0.8pt}{0pt}{teal!70!black},
+  attach boxed title to top left={yshift=-2mm, xshift=3mm},
+  boxed title style={
+    colback=teal!70!black,
+    sharp corners,
+    boxrule=0pt,
+    left=4pt, right=4pt, top=2pt, bottom=2pt
+  },
+  rounded corners,
+  boxsep=4pt,
+  breakable,
+  separator sign none,
+}{lem}
+
+% ========== ENTORNO: COROLARIO ==========
+\newtcbtheorem[use counter=maththeorem, number within=section]{corollary}{Corolario}{
+  enhanced,
+  colback=orange!5,
+  colframe=orange!70!black,
+  fonttitle=\bfseries,
+  coltitle=white,
+  borderline={0.8pt}{0pt}{orange!70!black},
+  attach boxed title to top left={yshift=-2mm, xshift=3mm},
+  boxed title style={
+    colback=orange!70!black,
+    sharp corners,
+    boxrule=0pt,
+    left=4pt, right=4pt, top=2pt, bottom=2pt
+  },
+  rounded corners,
+  boxsep=4pt,
+  breakable,
+  separator sign none,
+}{cor}
+
+
+% ========== ENTORNO: OBSERVACION ==========
+\newtcbtheorem[no counter]{obs}{Observación}{
+  enhanced,
+  colback=gray!5,
+  colframe=gray!70!black,
+  fonttitle=\bfseries,
+  coltitle=white,
+  borderline={0.8pt}{0pt}{gray!70!black},
+  attach boxed title to top left={yshift=-2mm, xshift=3mm},
+  boxed title style={
+    colback=gray!70!black,
+    sharp corners,
+    boxrule=0pt,
+    left=4pt, right=4pt, top=2pt, bottom=2pt
+  },
+  rounded corners,
+  boxsep=4pt,
+  breakable,
+}{obs}
+
+% ========== ENTORNO: EJEMPLO ==========
+\newtcbtheorem[number within=section]{example}{Ejemplo}{
+  enhanced,
+  colback=red!5,
+  colframe=red!70!black,
+  fonttitle=\bfseries,
+  coltitle=white,
+  borderline={0.8pt}{0pt}{red!70!black},
+  attach boxed title to top left={yshift=-2mm, xshift=3mm},
+  boxed title style={
+    colback=red!70!black,
+    sharp corners,
+    boxrule=0pt,
+    left=4pt, right=4pt, top=2pt, bottom=2pt
+  },
+  rounded corners,
+  boxsep=4pt,
+  breakable,
+}{eg}
+
+% ========== ENTORNO: EJERCICIO ==========
+\newtcbtheorem[number within=section]{exercise}{Ejercicio}{
+  enhanced,
+  colback=cyan!5,
+  colframe=cyan!70!black,
+  fonttitle=\bfseries,
+  coltitle=white,
+  borderline={0.8pt}{0pt}{cyan!70!black},
+  attach boxed title to top left={yshift=-2mm, xshift=3mm},
+  boxed title style={
+    colback=cyan!70!black,
+    sharp corners,
+    boxrule=0pt,
+    left=4pt, right=4pt, top=2pt, bottom=2pt
+  },
+  rounded corners,
+  boxsep=4pt,
+  breakable,
+}{ex}
+
+% ========== ENTORNO: DEMOSTRACION ==========
+\newenvironment{demostration}
+  {\par\medskip\noindent\textbf{Demostración.}\quad} % inicio: pone el título en negritas
+  {\hfill$\square$\par\medskip}
+
+% ========== ENTORNO: SOLUCION ==========
+\newenvironment{solution}
+  {\par\medskip\noindent\textbf{Solución.}\par\quad} % título en negritas y salto de línea
+  {\hfill$\square$\par\medskip}

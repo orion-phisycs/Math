@@ -1,0 +1,103 @@
+% ========================================
+% STYLE.STY
+% Configuración general para notas de clase
+% ========================================
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{structure/styles/style}[2025/10/25 Estilo general para notas]
+
+% ========== CODIFICACIÓN Y IDIOMA ==========
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[spanish]{babel}
+\RequirePackage[T1]{fontenc}
+
+% ========== GEOMETRÍA Y FORMATO ==========
+\RequirePackage{geometry}
+\geometry{
+    a4paper,
+    margin=2.5cm,
+    top=3cm,
+    bottom=3cm
+}
+
+\RequirePackage{fancyhdr}
+\RequirePackage{setspace}
+
+% ========== GRÁFICOS BÁSICOS ==========
+\RequirePackage{graphicx}
+\RequirePackage{float}
+\RequirePackage{caption}
+\RequirePackage{subcaption}
+\RequirePackage{wrapfig}
+
+% ========== TABLAS ==========
+\RequirePackage{array}
+\RequirePackage{booktabs}
+\RequirePackage{multirow}
+\RequirePackage{longtable}
+\RequirePackage{tabularx}
+
+% ========== LISTAS ==========
+\RequirePackage{enumerate}
+\RequirePackage{enumitem}
+
+% ========== HIPERVÍNCULOS ==========
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=myblue,
+    filecolor=myred,
+    urlcolor=myblue,
+    citecolor=mygreen,
+}
+\RequirePackage{cleveref}
+
+% Configuración de cleveref en español
+\crefname{equation}{ecuación}{ecuaciones}
+\crefname{figure}{figura}{figuras}
+\crefname{table}{tabla}{tablas}
+\crefname{section}{sección}{secciones}
+
+% ========== ENCABEZADOS Y PIES ==========
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ========== ESPACIADO ==========
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\onehalfspacing
+
+% Conjuntos numéricos
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+
+% Operadores
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\arcsen}{arcsen}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\dom}{Dom}
+\DeclareMathOperator{\ran}{Ran}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\diag}{diag}
+
+% Comandos útiles
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\newcommand{\partiald}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\dd}[2]{\frac{d #1}{d #2}}
+
+% Matrices
+\newcommand{\mat}[1]{\boldsymbol{#1}}
+
+\endinput
