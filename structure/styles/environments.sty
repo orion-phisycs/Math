@@ -127,6 +127,26 @@
   separator sign none,
 }{cor}
 
+% ========== ENTORNO: AXIOMA ==========
+\newtcbtheorem[use counter=maththeorem, number within=section]{axiom}{Axioma}{
+  enhanced,
+  colback=yellow!5,
+  colframe=yellow70!black,
+  fonttitle=\bfseries,
+  coltitle=white,
+  borderline={0.8pt}{0pt}{yellow!70!black},
+  attach boxed title to top left={yshift=-2mm, xshift=3mm},
+  boxed title style={
+    colback=yellow!70!black,
+    sharp corners,
+    boxrule=0pt,
+    left=4pt, right=4pt, top=2pt, bottom=2pt
+  },
+  rounded corners,
+  boxsep=4pt,
+  breakable,
+  separator sign none,
+}{ax}
 
 % ========== ENTORNO: OBSERVACION ==========
 \newtcbtheorem[no counter]{obs}{Observación}{
